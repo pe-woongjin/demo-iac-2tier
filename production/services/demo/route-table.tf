@@ -25,7 +25,7 @@ resource "aws_route_table" "pri-rt" {
   }
 
   tags = {
-    Name        = "${var.service_name}-${var.aws_region_alias}-${var.environment}-${lookup(var.public_rt_tag_names[count.index], "Name")}"
+    Name        = "${var.service_name}-${var.aws_region_alias}-${var.environment}-${lookup(var.private_rt_tag_names[count.index], "Name")}"
     Environment = var.environment
   }
 }
