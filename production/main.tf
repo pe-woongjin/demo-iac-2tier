@@ -5,32 +5,54 @@ terraform {
 
 provider "aws" {
   shared_credentials_file = "~/.aws/credentials"
-  region = var.aws_region
+  region = var.region_name
   version = "~> 2.51"
 }
 
 module "vpc" {
-  source = "./vpc"
+  source = "./modules/vpc"
 
+  # common
   team_name = var.team_name
-  environment = var.environment
-  aws_region_alias = var.aws_region_alias
-
   service_name = var.service_name
+  service_version = var.service_version
+  environment = var.environment
+  svc_prefix_nm = "${var.service_name}-${var.environment}"
+  resrc_prefix_nm = "${var.service_name}-${var.region_nm}-${var.environment}"
+
+  # vpc
   vpc_cidr_block = var.vpc_cidr_block
+}
+
+module "elb" {
+  source = "./modules/elb"
+
+  # common
+  environment = var.environment
+  svc_prefix_nm = "${var.service_name}-${var.environment}"
+  resrc_prefix_nm = "${var.service_name}-${var.region_nm}-${var.environment}"
+
+  # subnets
+  pub_sn_ids = module.demo.pub_sn_ids
+
+  # sg
+  mgmt_sg_id = module.demo.mgmt_sg_id
+
+  # tg
+  ui-tg8080 = module.ui.ui-tg8080
+  api-tg8080 = module.api.api-tg8080
+
+  # acm
+  acm_arn = var.acm_arn
 }
 
 module "demo" {
   source = "./services/demo"
 
-  # service name
-  service_name = var.service_name
-
-  # runtime environment
+  # common
   environment = var.environment
-
-  # region name
-  aws_region_alias = var.aws_region_alias
+  svc_prefix_nm = "${var.service_name}-${var.environment}"
+  resrc_prefix_nm = "${var.service_name}-${var.region_nm}-${var.environment}"
 
   # vpc
   vpc_id = module.vpc.id
@@ -45,79 +67,54 @@ module "demo" {
 
   # sg
   sg_cidr_block = var.sg_cidr_block
-
-  # acm
-  acm_demo = var.acm_demo
 }
 
 module "ui" {
   source = "./services/ui"
 
-  # service name
-  service_name = var.service_name
-
-  # runtime environment
+  # common
   environment = var.environment
-
-  # region name
-  aws_region = var.aws_region
-  aws_region_alias = var.aws_region_alias
+  svc_prefix_nm = "${var.service_name}-${var.environment}"
+  resrc_prefix_nm = "${var.service_name}-${var.region_nm}-${var.environment}"
 
   # vpc
   vpc_id = module.vpc.id
   vpc_cidr_block = var.vpc_cidr_block
 
-  # for subnet
+  # subnet
   ui_sn_list = var.ui_sn_list
 
-  # for router table
+  # router table
   pri_rt_ids = module.demo.pri_rt_ids
 
-  # for sg
+  # sg
   sg_cidr_block = var.sg_cidr_block
 
-  # for lc
-  ui_image_id = var.ui_image_id
-  ui_instance_type = var.ui_instance_type
-
-  # for asg
-  min_size = var.min_size
-  max_size = var.max_size
-  ui_target_group_arns = module.demo.ui_target_group_arns
+  # lc
+  ui_lc = var.ui_lc
 }
 
 module "api" {
   source = "./services/api"
 
-  # service name
-  service_name = var.service_name
-
-  # runtime environment
+  # common
   environment = var.environment
-
-  # region name
-  aws_region = var.aws_region
-  aws_region_alias = var.aws_region_alias
+  svc_prefix_nm = "${var.service_name}-${var.environment}"
+  resrc_prefix_nm = "${var.service_name}-${var.region_nm}-${var.environment}"
 
   # vpc
   vpc_id = module.vpc.id
   vpc_cidr_block = var.vpc_cidr_block
 
-  # for subnet
+  # subnet
   api_sn_list = var.api_sn_list
 
-  # for router table
+  # router table
   pri_rt_ids = module.demo.pri_rt_ids
 
-  # for sg
+  # sg
   sg_cidr_block = var.sg_cidr_block
 
-  # for lc
-  api_image_id = var.api_image_id
-  api_instance_type = var.api_instance_type
-
-  # for asg
-  min_size = var.min_size
-  max_size = var.max_size
-  api_target_group_arns = module.demo.api_target_group_arns
+  # lc
+  api_lc = var.api_lc
 }

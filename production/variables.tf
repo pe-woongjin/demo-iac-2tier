@@ -2,40 +2,40 @@
 # COMMON
 # ######################
 variable "team_name" {
-  description = "Team name of DevOps"
+  description = "team name of DevOps"
   type = string
-  default = "Automation"
 }
 
 variable "service_name" {
-  description = "Service name"
+  description = "name of service"
   type = string
-  default = "demo"
+}
+
+variable "service_version" {
+  description = "version of service"
+  type = string
 }
 
 variable "environment" {
   description = "Runtime Environment such as default, develop, stage, production"
   type = string
-  default = "prod"
 }
 
-variable "aws_region" {
-  description = "Region for the Comp"
+variable "region_name" {
+  description = "aws region"
   type = string
-  default = "ap-northeast-2"
 }
 
-variable "aws_region_alias" {
-  description = "Region name for the Comp"
+variable "region_nm" {
+  description = "aws region alias"
   type = string
-  default = "apne2"
 }
 
 
 # ######################
 # VPC
 # ######################
-# cidr block
+# vpc cidr block
 variable "vpc_cidr_block" {
   description = "cidr block of vpc"
   type = string
@@ -45,19 +45,19 @@ variable "vpc_cidr_block" {
 # ######################
 # Subnet
 # ######################
-# subnet
+# public subnet
 variable "pub_sn_list" {
   description = "public subnets"
   type = list(map(string))
 }
 
-# subnet
+# ui subnet
 variable "ui_sn_list" {
   description = "private subnets"
   type = list(map(string))
 }
 
-# subnet
+# api subnet
 variable "api_sn_list" {
   description = "private subnets"
   type = list(map(string))
@@ -65,22 +65,15 @@ variable "api_sn_list" {
 
 
 # ######################
-# Internet Gateway
-# Elastic IP
-# NAT
-# ######################
-
-
-# ######################
 # Route Table
 # ######################
-# route table
+# public route table
 variable "public_rt_tag_names" {
   description = "tag name for public route table"
   type = list(map(string))
 }
 
-# route table
+# private route table
 variable "private_rt_tag_names" {
   description = "tag name for private route table"
   type = list(map(string))
@@ -92,7 +85,7 @@ variable "private_rt_tag_names" {
 # ######################
 # sg cidr block
 variable "sg_cidr_block" {
-  description = "sg cidr block"
+  description = "cidr block of sg"
   type = list(string)
 }
 
@@ -101,39 +94,16 @@ variable "sg_cidr_block" {
 # Launch Configuration
 # AutoScaling Group
 # ######################
-variable "ui_image_id" {
-  description = "image id used in ui"
-  type = string
+# ui launch configuration
+variable "ui_lc" {
+  description = "ui launch configuration"
+  type = map(string)
 }
 
-# instance type ui
-variable "ui_instance_type" {
-  description = "instance type used in ui"
-  type = string
-}
-
-# image id api
-variable "api_image_id" {
-  description = "image id used in api"
-  type = string
-}
-
-# instance type api
-variable "api_instance_type" {
-  description = "instance type used in api"
-  type = string
-}
-
-# autoscaling min size
-variable "min_size" {
-  description = "autoscaling min size"
-  type = number
-}
-
-# autoscaling max size
-variable "max_size" {
-  description = "autoscaling max size"
-  type = number
+# api launch configuration
+variable "api_lc" {
+  description = "api launch configuration"
+  type = map(string)
 }
 
 
@@ -142,7 +112,7 @@ variable "max_size" {
 # Route 53
 # ######################
 # acm
-variable "acm_demo" {
-  description = "prefix resource name"
+variable "acm_arn" {
+  description = "acm arn"
   type = string
 }

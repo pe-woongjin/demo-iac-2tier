@@ -1,11 +1,11 @@
+output "pub_sn_ids" {
+  value = aws_subnet.pub-sn.*.id
+}
+
 output "pri_rt_ids" {
   value = aws_route_table.pri-rt.*.id
 }
 
-output "api_target_group_arns" {
-  value = [aws_alb_target_group.api-tg8080.arn]
-}
-
-output "ui_target_group_arns" {
-  value = [aws_alb_target_group.ui-tg8080.arn]
+output "mgmt_sg_id" {
+  value = aws_security_group.mgmt-alb-sg.id
 }

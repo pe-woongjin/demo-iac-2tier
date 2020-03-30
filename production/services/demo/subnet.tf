@@ -8,7 +8,7 @@ resource "aws_subnet" "pub-sn" {
   map_public_ip_on_launch   = true
 
   tags = {
-    Name        = "${var.service_name}-${var.aws_region_alias}-${var.environment}-${lookup(var.pub_sn_list[count.index], "Name")}"
+    Name        = "${var.resrc_prefix_nm}-${lookup(var.pub_sn_list[count.index], "Name")}"
     Environment = var.environment
   }
 }

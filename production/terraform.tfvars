@@ -7,25 +7,28 @@ team_name = "Automation"
 # service name
 service_name = "demo"
 
+# service version
+service_version = "0.1"
+
 # env
 environment = "prod"
 
 # region
-aws_region = "ap-northeast-2"
-aws_region_alias = "apne2"
+region_name = "ap-northeast-2"
+region_nm = "apne2"
 
 
 # ######################
 # VPC
 # ######################
-# cidr block
+# vpc cidr block
 vpc_cidr_block = "10.50.0.0/16"
 
 
 # ######################
 # Subnet
 # ######################
-# subnet public
+# public subnet
 pub_sn_list = [
   {
     cidr_block = "10.50.10.0/24",
@@ -39,7 +42,7 @@ pub_sn_list = [
   }
 ]
 
-# subnet ui
+# private ui subnet
 ui_sn_list = [
   {
     cidr_block = "10.50.20.0/24",
@@ -53,7 +56,7 @@ ui_sn_list = [
   }
 ]
 
-# subnet api
+# private api subnet
 api_sn_list = [
   {
     cidr_block = "10.50.30.0/24",
@@ -69,23 +72,16 @@ api_sn_list = [
 
 
 # ######################
-# Internet Gateway
-# Elastic IP
-# NAT
-# ######################
-
-
-# ######################
 # Route Table
 # ######################
-# route table
+# public route table
 public_rt_tag_names = [
   {
     Name = "pub-rt"
   }
 ]
 
-# route table
+# private route table
 private_rt_tag_names = [
   {
     Name = "pri-rt"
@@ -96,6 +92,7 @@ private_rt_tag_names = [
 # ######################
 # Security Group
 # ######################
+# sg cidr block
 sg_cidr_block = ["58.151.93.9/32", "58.151.93.2/32"]
 
 
@@ -103,23 +100,21 @@ sg_cidr_block = ["58.151.93.9/32", "58.151.93.2/32"]
 # Launch Configuration
 # AutoScaling Group
 # ######################
-# image id ui
-ui_image_id = "ami-0ecd78c22823e02ef"
+# ui launch configuration
+ui_lc = {
+    "id" = "ami-0ecd78c22823e02ef"
+    "type" = "t2.micro"
+    "min_size" = 0
+    "max_size" = 0
+}
 
-# instance type ui
-ui_instance_type = "t2.micro"
-
-# image id api
-api_image_id = "ami-0ecd78c22823e02ef"
-
-# instance type api
-api_instance_type = "t2.micro"
-
-# autoscaling min size
-min_size = 0
-
-# autoscaling max size
-max_size = 0
+# api launch configuration
+api_lc = {
+  "id" = "ami-0ecd78c22823e02ef"
+  "type" = "t2.micro"
+  "min_size" = 0
+  "max_size" = 0
+}
 
 
 # ######################
@@ -127,4 +122,4 @@ max_size = 0
 # Route 53
 # ######################
 # acm
-acm_demo = "arn:aws:acm:ap-northeast-2:144149479695:certificate/efc7a467-526d-4476-b91f-ef69f146c6a6"
+acm_arn = "arn:aws:acm:ap-northeast-2:144149479695:certificate/efc7a467-526d-4476-b91f-ef69f146c6a6"

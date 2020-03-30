@@ -6,13 +6,13 @@ variable "environment" {
   type = string
 }
 
-variable "service_name" {
-  description = "name of vpc"
+variable "svc_prefix_nm" {
+  description = "svc prefix name"
   type = string
 }
 
-variable "aws_region_alias" {
-  description = "aws region alias of prefix"
+variable "resrc_prefix_nm" {
+  description = "resource prefix name"
   type = string
 }
 
@@ -23,9 +23,10 @@ variable "aws_region_alias" {
 # vpc id
 variable "vpc_id" {
   type        = string
-  description = "count of loop"
+  description = "vpc id"
 }
 
+# vpc cidr block
 variable "vpc_cidr_block" {
   description = "cidr block of vpc"
   type = string
@@ -35,7 +36,7 @@ variable "vpc_cidr_block" {
 # ######################
 # Subnet
 # ######################
-# subnet
+# public subnet
 variable "pub_sn_list" {
   description = "public subnets"
   type = list(map(string))
@@ -45,13 +46,13 @@ variable "pub_sn_list" {
 # ######################
 # Route Table
 # ######################
-# route table
+# public route table
 variable "public_rt_tag_names" {
   description = "tag name for public route table"
   type = list(map(string))
 }
 
-# route table
+# private route table
 variable "private_rt_tag_names" {
   description = "tag name for private route table"
   type = list(map(string))
@@ -63,17 +64,6 @@ variable "private_rt_tag_names" {
 # ######################
 # sg cidr block
 variable "sg_cidr_block" {
-  description = "sg cidr block"
+  description = "cidr block of sg"
   type = list(string)
-}
-
-
-# ######################
-# ACM
-# Route 53
-# ######################
-# acm
-variable "acm_demo" {
-  description = "prefix resource name"
-  type = string
 }

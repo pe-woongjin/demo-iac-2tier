@@ -1,26 +1,20 @@
 # ######################
 # COMMON
 # ######################
-variable "service_name" {
-  description = "name of service"
-  type = string
-}
-
 variable "environment" {
   description = "Runtime Environment such as default, develop, stage, production"
   type = string
 }
 
-variable "aws_region" {
-  description = "Region for the OpsFlex"
+variable "svc_prefix_nm" {
+  description = "svc prefix name"
   type = string
 }
 
-variable "aws_region_alias" {
-  description = "aws region alias of prefix"
+variable "resrc_prefix_nm" {
+  description = "resource prefix name"
   type = string
 }
-
 
 
 # ######################
@@ -29,9 +23,10 @@ variable "aws_region_alias" {
 # vpc id
 variable "vpc_id" {
   type        = string
-  description = "count of loop"
+  description = "vpc id"
 }
 
+# vpc cidr block
 variable "vpc_cidr_block" {
   description = "cidr block of vpc"
   type = string
@@ -41,7 +36,7 @@ variable "vpc_cidr_block" {
 # ######################
 # Subnet
 # ######################
-# subnet
+# ui subnet
 variable "ui_sn_list" {
   description = "private ui subnets"
   type = list(map(string))
@@ -63,7 +58,7 @@ variable "pri_rt_ids" {
 # ######################
 # sg cidr block
 variable "sg_cidr_block" {
-  description = "sg cidr block"
+  description = "cidr block of sg"
   type = list(string)
 }
 
@@ -72,32 +67,8 @@ variable "sg_cidr_block" {
 # Launch Configuration
 # AutoScaling Group
 # ######################
-# image id api
-variable "ui_image_id" {
-  description = "image id used in ui"
-  type = string
-}
-
-# instance type api
-variable "ui_instance_type" {
-  description = "instance type used in ui"
-  type = string
-}
-
-# autoscaling min size
-variable "min_size" {
-  description = "autoscaling min size"
-  type = number
-}
-
-# autoscaling max size
-variable "max_size" {
-  description = "autoscaling max size"
-  type = number
-}
-
-# target group arns for ui
-variable "ui_target_group_arns" {
-  description = "target group arns for ui"
-  type = list(string)
+# ui launch configuration
+variable "ui_lc" {
+  description = "ui launch configuration"
+  type = map(string)
 }

@@ -6,9 +6,9 @@ resource "aws_vpc" "comp" {
   instance_tenancy      = "default"
 
   tags  = {
-    Name        = "${var.service_name}-${var.aws_region_alias}-${var.environment}-vpc"
+    Name        = "${var.resrc_prefix_nm}-vpc"
     Environment = var.environment
     Team        = var.team_name
-    Version     = "0.0.1"
+    Version     = var.service_version
   }
 }

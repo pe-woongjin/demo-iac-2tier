@@ -1,6 +1,6 @@
 /* default management security group for ec2 instances. It helps monitoring, access operationg works like that. */
 resource "aws_security_group" "default-ops-sg" {
-  name          = "${var.service_name}-${var.aws_region_alias}-${var.environment}-default-ops-sg"
+  name          = "${var.resrc_prefix_nm}-default-ops-sg"
   vpc_id        = var.vpc_id
 
   ingress {
@@ -15,13 +15,13 @@ resource "aws_security_group" "default-ops-sg" {
   }
 
   tags = {
-    Name        = "${var.service_name}-${var.aws_region_alias}-${var.environment}-default-ops-sg"
+    Name        = "${var.resrc_prefix_nm}-default-ops-sg"
     Environment = var.environment
   }
 }
 
 resource "aws_security_group" "mgmt-alb-sg" {
-  name          = "${var.service_name}-${var.aws_region_alias}-${var.environment}-mgmt-alb-sg"
+  name          = "${var.resrc_prefix_nm}-mgmt-alb-sg"
   vpc_id        = var.vpc_id
 
   ingress {
@@ -50,7 +50,7 @@ resource "aws_security_group" "mgmt-alb-sg" {
   }
 
   tags = {
-    Name        = "${var.service_name}-${var.aws_region_alias}-${var.environment}-mgmt-alb-sg"
+    Name        = "${var.resrc_prefix_nm}-mgmt-alb-sg"
     Environment = var.environment
   }
 }
