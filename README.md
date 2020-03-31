@@ -14,3 +14,9 @@ cd demo-iac-2tier
 git remote update
 git checkout -b feature/CMSA-377 origin/feature/CMSA-377
 ```
+
+
+### git delete remote branch  
+```
+git push origin :feature/CMSA-377
+```
