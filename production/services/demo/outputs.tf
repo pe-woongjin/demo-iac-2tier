@@ -1,5 +1,5 @@
 output "pub_sn_ids" {
-  value = aws_subnet.pub-sn.*.id
+  value = [ data.aws_subnet.pub-sn-a.id, data.aws_subnet.pub-sn-c.id ]
 }
 
 output "pri_rt_ids" {
@@ -7,5 +7,5 @@ output "pri_rt_ids" {
 }
 
 output "mgmt_sg_id" {
-  value = aws_security_group.mgmt-alb-sg.id
+  value = data.aws_security_group.mgmt-alb-sg.id
 }
