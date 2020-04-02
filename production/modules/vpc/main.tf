@@ -1,3 +1,3 @@
 data "aws_vpc" "comp" {
-  id = "vpc-00328a91a38607fb5"
+  id = var.import_data.vpc_id
 }

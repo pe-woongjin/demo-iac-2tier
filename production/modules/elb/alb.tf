@@ -1,5 +1,5 @@
 data "aws_alb_listener" "mgmt-alb-listener443" {
-  arn = "arn:aws:elasticloadbalancing:ap-northeast-2:144149479695:listener/app/comp-apne2-prod-mgmt-alb/7659cf0b83947eeb/67671519c7e8877b"
+  arn = var.import_data.alb_arn
 }
 
 resource "aws_alb_listener_rule" "mgmt-alb-listener443-ui-rule" {
