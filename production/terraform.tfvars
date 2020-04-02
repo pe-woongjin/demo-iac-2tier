@@ -22,7 +22,7 @@ region_nm = "apne2"
 # VPC
 # ######################
 # vpc cidr block
-vpc_cidr_block = "10.50.0.0/16"
+vpc_cidr_block = "10.40.0.0/16"
 
 
 # ######################
@@ -31,12 +31,12 @@ vpc_cidr_block = "10.50.0.0/16"
 # public subnet
 pub_sn_list = [
   {
-    cidr_block = "10.50.10.0/24",
+    cidr_block = "10.40.10.0/24",
     availability_zone = "ap-northeast-2a",
     Name = "pub-1a-sn"
   },
   {
-    cidr_block = "10.50.11.0/24",
+    cidr_block = "10.40.11.0/24",
     availability_zone = "ap-northeast-2c",
     Name = "pub-1c-sn"
   }
@@ -45,12 +45,12 @@ pub_sn_list = [
 # private ui subnet
 ui_sn_list = [
   {
-    cidr_block = "10.50.20.0/24",
+    cidr_block = "10.40.30.0/24",
     availability_zone = "ap-northeast-2a",
     Name = "ui-1a-sn"
   },
   {
-    cidr_block = "10.50.21.0/24",
+    cidr_block = "10.40.31.0/24",
     availability_zone = "ap-northeast-2c",
     Name = "ui-1c-sn"
   }
@@ -59,12 +59,12 @@ ui_sn_list = [
 # private api subnet
 api_sn_list = [
   {
-    cidr_block = "10.50.30.0/24",
+    cidr_block = "10.40.40.0/24",
     availability_zone = "ap-northeast-2a",
     Name = "api-1a-sn"
   },
   {
-    cidr_block = "10.50.31.0/24",
+    cidr_block = "10.40.41.0/24",
     availability_zone = "ap-northeast-2c",
     Name = "api-1c-sn"
   }

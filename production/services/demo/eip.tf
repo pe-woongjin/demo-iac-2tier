@@ -1,9 +1,3 @@
-resource "aws_eip" "eip" {
-  vpc         = true
-  depends_on  = [aws_internet_gateway.igw]
-
-  tags = {
-    Name        = "${var.resrc_prefix_nm}-eip"
-    Environment = var.environment
-  }
+data "aws_eip" "eip" {
+  id = "eipalloc-0186f5a2948ac90f4"
 }

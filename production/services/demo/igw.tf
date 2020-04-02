@@ -1,8 +1,3 @@
-resource "aws_internet_gateway" "igw" {
-  vpc_id = var.vpc_id
-
-  tags = {
-    Name        = "${var.resrc_prefix_nm}-igw"
-    Environment = var.environment
-  }
+data "aws_internet_gateway" "igw" {
+  internet_gateway_id = "igw-05fbb9a6f55806c44"
 }
