@@ -40,3 +40,13 @@ variable "vpc_cidr_block" {
   description = "cidr block of vpc"
   type = string
 }
+
+
+# ######################
+# Data
+# ######################
+# import data
+variable "import_data" {
+  description = "import data"
+  type = map(string)
+}

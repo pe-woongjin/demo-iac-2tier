@@ -22,6 +22,9 @@ module "vpc" {
 
   # vpc
   vpc_cidr_block = var.vpc_cidr_block
+
+  # import data
+  import_data = var.import_data
 }
 
 module "elb" {
@@ -44,6 +47,9 @@ module "elb" {
 
   # acm
   acm_arn = var.acm_arn
+
+  # import data
+  import_data = var.import_data
 }
 
 module "demo" {
@@ -67,6 +73,9 @@ module "demo" {
 
   # sg
   sg_cidr_block = var.sg_cidr_block
+
+  # import data
+  import_data = var.import_data
 }
 
 module "ui" {

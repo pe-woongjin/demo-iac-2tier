@@ -116,3 +116,13 @@ variable "acm_arn" {
   description = "acm arn"
   type = string
 }
+
+
+# ######################
+# Data
+# ######################
+# import data
+variable "import_data" {
+  description = "import data"
+  type = map(string)
+}
