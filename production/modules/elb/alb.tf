@@ -1,5 +1,5 @@
 data "aws_alb_listener" "mgmt-alb-listener443" {
-  arn = var.import_data.alb_arn
+  arn = var.comp-apne2-prod-mgmt-alb_id
 }
 
 resource "aws_alb_listener_rule" "mgmt-alb-listener443-ui-rule" {

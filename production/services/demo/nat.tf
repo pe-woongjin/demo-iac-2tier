@@ -1,3 +1,3 @@
 data "aws_nat_gateway" "nat" {
-  id = var.import_data.nat_id
+  id = var.comp-apne2-prod-nat_id
 }

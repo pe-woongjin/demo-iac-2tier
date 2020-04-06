@@ -24,7 +24,7 @@ module "vpc" {
   vpc_cidr_block = var.vpc_cidr_block
 
   # import data
-  import_data = var.import_data
+  comp-apne2-prod-vpc_id = var.comp-apne2-prod-vpc_id
 }
 
 module "elb" {
@@ -49,7 +49,7 @@ module "elb" {
   acm_arn = var.acm_arn
 
   # import data
-  import_data = var.import_data
+  comp-apne2-prod-mgmt-alb_id = var.comp-apne2-prod-mgmt-alb_id
 }
 
 module "demo" {
@@ -75,7 +75,13 @@ module "demo" {
   sg_cidr_block = var.sg_cidr_block
 
   # import data
-  import_data = var.import_data
+  comp-apne2-prod-eip_id = var.comp-apne2-prod-eip_id
+  comp-apne2-prod-igw_id = var.comp-apne2-prod-igw_id
+  comp-apne2-prod-nat_id = var.comp-apne2-prod-nat_id
+  comp-apne2-prod-default-ops-sg_id = var.comp-apne2-prod-default-ops-sg_id
+  comp-apne2-prod-mgmt-alb-sg_id = var.comp-apne2-prod-mgmt-alb-sg_id
+  comp-apne2-prod-pub-1a-sn_id = var.comp-apne2-prod-pub-1a-sn_id
+  comp-apne2-prod-pub-1c-sn_id = var.comp-apne2-prod-pub-1c-sn_id
 }
 
 module "ui" {

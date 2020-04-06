@@ -128,14 +128,12 @@ acm_arn = "arn:aws:acm:ap-northeast-2:144149479695:certificate/efc7a467-526d-447
 # ######################
 # Data
 # ######################
-import_data = {
-  "alb_arn" = "arn:aws:elasticloadbalancing:ap-northeast-2:144149479695:listener/app/comp-apne2-prod-mgmt-alb/7659cf0b83947eeb/67671519c7e8877b"
-  "vpc_id" = "vpc-00328a91a38607fb5"
-  "eip_id" = "eipalloc-0186f5a2948ac90f4"
-  "igw_id" = "igw-05fbb9a6f55806c44"
-  "nat_id" = "nat-0fd77b23c5659f2f1"
-  "sg_def_id" = "sg-06d73665b82d333be"
-  "sg_alb_id" = "sg-0d6079940fc891b6b"
-  "sn_pub_a_id" = "subnet-023e6127b6308e10e"
-  "sn_pub_c_id" = "subnet-08ae4aeabbaa94eaa"
-}
+comp-apne2-prod-mgmt-alb_id = "arn:aws:elasticloadbalancing:ap-northeast-2:144149479695:listener/app/comp-apne2-prod-mgmt-alb/7659cf0b83947eeb/67671519c7e8877b"
+comp-apne2-prod-vpc_id = "vpc-00328a91a38607fb5"
+comp-apne2-prod-eip_id = "eipalloc-0186f5a2948ac90f4"
+comp-apne2-prod-igw_id = "igw-05fbb9a6f55806c44"
+comp-apne2-prod-nat_id = "nat-0fd77b23c5659f2f1"
+comp-apne2-prod-default-ops-sg_id = "sg-06d73665b82d333be"
+comp-apne2-prod-mgmt-alb-sg_id = "sg-0d6079940fc891b6b"
+comp-apne2-prod-pub-1a-sn_id = "subnet-023e6127b6308e10e"
+comp-apne2-prod-pub-1c-sn_id = "subnet-08ae4aeabbaa94eaa"

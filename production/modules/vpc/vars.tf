@@ -45,8 +45,7 @@ variable "vpc_cidr_block" {
 # ######################
 # Data
 # ######################
-# import data
-variable "import_data" {
-  description = "import data"
-  type = map(string)
+variable "comp-apne2-prod-vpc_id" {
+  description = "comp-apne2-prod-vpc_id"
+  type = string
 }

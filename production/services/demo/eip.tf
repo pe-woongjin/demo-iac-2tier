@@ -1,3 +1,3 @@
 data "aws_eip" "eip" {
-  id = var.import_data.eip_id
+  id = var.comp-apne2-prod-eip_id
 }

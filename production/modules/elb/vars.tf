@@ -65,8 +65,7 @@ variable "acm_arn" {
 # ######################
 # Data
 # ######################
-# import data
-variable "import_data" {
-  description = "import data"
-  type = map(string)
+variable "comp-apne2-prod-mgmt-alb_id" {
+  description = "comp-apne2-prod-mgmt-alb_id"
+  type = string
 }

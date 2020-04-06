@@ -121,8 +121,47 @@ variable "acm_arn" {
 # ######################
 # Data
 # ######################
-# import data
-variable "import_data" {
-  description = "import data"
-  type = map(string)
+variable "comp-apne2-prod-mgmt-alb_id" {
+  description = "comp-apne2-prod-mgmt-alb_id"
+  type = string
+}
+
+variable "comp-apne2-prod-vpc_id" {
+  description = "comp-apne2-prod-vpc_id"
+  type = string
+}
+
+variable "comp-apne2-prod-eip_id" {
+  description = "comp-apne2-prod-eip_id"
+  type = string
+}
+
+variable "comp-apne2-prod-igw_id" {
+  description = "comp-apne2-prod-igw_id"
+  type = string
+}
+
+variable "comp-apne2-prod-nat_id" {
+  description = "comp-apne2-prod-nat_id"
+  type = string
+}
+
+variable "comp-apne2-prod-default-ops-sg_id" {
+  description = "comp-apne2-prod-default-ops-sg_id"
+  type = string
+}
+
+variable "comp-apne2-prod-mgmt-alb-sg_id" {
+  description = "comp-apne2-prod-mgmt-alb-sg_id"
+  type = string
+}
+
+variable "comp-apne2-prod-pub-1a-sn_id" {
+  description = "comp-apne2-prod-pub-1a-sn_id"
+  type = string
+}
+
+variable "comp-apne2-prod-pub-1c-sn_id" {
+  description = "comp-apne2-prod-pub-1c-sn_id"
+  type = string
 }

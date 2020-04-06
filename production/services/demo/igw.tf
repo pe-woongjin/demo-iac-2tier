@@ -1,3 +1,3 @@
 data "aws_internet_gateway" "igw" {
-  internet_gateway_id = var.import_data.igw_id
+  internet_gateway_id = var.comp-apne2-prod-igw_id
 }
