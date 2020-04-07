@@ -11,7 +11,7 @@ resource "aws_alb_listener_rule" "mgmt-alb-listener443-ui-rule" {
   }
 
   condition {
-    path_pattern {
+    host_header {
       values = [ var.hosts.ui ]
     }
   }
@@ -26,7 +26,7 @@ resource "aws_alb_listener_rule" "mgmt-alb-listener443-api-rule" {
   }
 
   condition {
-    path_pattern {
+    host_header {
       values = [ var.hosts.api ]
     }
   }
