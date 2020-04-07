@@ -102,18 +102,20 @@ sg_cidr_block = ["58.151.93.9/32", "58.151.93.2/32"]
 # ######################
 # ui launch configuration
 ui_lc = {
-    "id" = "ami-0ecd78c22823e02ef"
-    "type" = "t2.micro"
-    "min_size" = 0
-    "max_size" = 0
+    "id" = "ami-0b2722500ba36608b"
+    "type" = "t3.medium"
+    "key_name" = "comp-prod-keypair"
+    "min_size" = 1
+    "max_size" = 1
 }
 
 # api launch configuration
 api_lc = {
-  "id" = "ami-0ecd78c22823e02ef"
-  "type" = "t2.micro"
-  "min_size" = 0
-  "max_size" = 0
+  "id" = "ami-05493651bd1c0647b"
+  "type" = "t3.medium"
+  "key_name" = "comp-prod-keypair"
+  "min_size" = 1
+  "max_size" = 1
 }
 
 
@@ -123,6 +125,12 @@ api_lc = {
 # ######################
 # acm
 acm_arn = "arn:aws:acm:ap-northeast-2:144149479695:certificate/efc7a467-526d-4476-b91f-ef69f146c6a6"
+
+# route 53 host name
+hosts = {
+  "ui" = "ui.mingming.shop"
+  "api" = "api.mingming.shop"
+}
 
 
 # ######################

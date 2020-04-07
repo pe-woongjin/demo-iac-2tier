@@ -42,11 +42,16 @@ module "elb" {
   mgmt_sg_id = module.demo.mgmt_sg_id
 
   # tg
-  ui-tg8080 = module.ui.ui-tg8080
-  api-tg8080 = module.api.api-tg8080
+  ui-tg80-a = module.ui.ui-tg80-a
+  ui-tg80-b = module.ui.ui-tg80-b
+  api-tg8080-a = module.api.api-tg8080-a
+  api-tg8080-b = module.api.api-tg8080-b
 
   # acm
   acm_arn = var.acm_arn
+
+  # host
+  hosts = var.hosts
 
   # import data
   comp-apne2-prod-mgmt-alb_id = var.comp-apne2-prod-mgmt-alb_id

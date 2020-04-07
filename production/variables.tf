@@ -117,6 +117,12 @@ variable "acm_arn" {
   type = string
 }
 
+# route 53 host name
+variable "hosts" {
+  description = "route 53 host name"
+  type = map(string)
+}
+
 
 # ######################
 # Data
