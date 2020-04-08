@@ -106,16 +106,16 @@ ui_lc = {
     "type" = "t3.medium"
     "key_name" = "comp-prod-keypair"
     "min_size" = 1
-    "max_size" = 1
+    "max_size" = 2
 }
 
 # api launch configuration
 api_lc = {
-  "id" = "ami-05493651bd1c0647b"
+  "id" = "ami-036d0b92069714dd9"
   "type" = "t3.medium"
   "key_name" = "comp-prod-keypair"
   "min_size" = 1
-  "max_size" = 1
+  "max_size" = 2
 }
 
 
