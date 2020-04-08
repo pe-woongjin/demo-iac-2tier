@@ -41,12 +41,20 @@ variable "mgmt_sg_id" {
 # Target Group
 # ######################
 # target group of ui
-variable "ui-tg8080" {
+variable "ui-tg80-a" {
+  description = "target group of ui"
+}
+
+variable "ui-tg80-b" {
   description = "target group of ui"
 }
 
 # target group of api
-variable "api-tg8080" {
+variable "api-tg8080-a" {
+  description = "target group of api"
+}
+
+variable "api-tg8080-b" {
   description = "target group of api"
 }
 
@@ -61,12 +69,17 @@ variable "acm_arn" {
   type = string
 }
 
+# route 53 host name
+variable "hosts" {
+  description = "route 53 host name"
+  type = map(string)
+}
+
 
 # ######################
 # Data
 # ######################
-# import data
-variable "import_data" {
-  description = "import data"
-  type = map(string)
+variable "comp-apne2-prod-mgmt-alb_id" {
+  description = "comp-apne2-prod-mgmt-alb_id"
+  type = string
 }
