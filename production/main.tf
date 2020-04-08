@@ -35,12 +35,6 @@ module "elb" {
   svc_prefix_nm = "${var.service_name}-${var.environment}"
   resrc_prefix_nm = "${var.service_name}-${var.region_nm}-${var.environment}"
 
-  # subnets
-  pub_sn_ids = module.demo.pub_sn_ids
-
-  # sg
-  mgmt_sg_id = module.demo.mgmt_sg_id
-
   # tg
   ui-tg80-a = module.ui.ui-tg80-a
   ui-tg80-b = module.ui.ui-tg80-b
@@ -80,13 +74,7 @@ module "demo" {
   sg_cidr_block = var.sg_cidr_block
 
   # import data
-  comp-apne2-prod-eip_id = var.comp-apne2-prod-eip_id
-  comp-apne2-prod-igw_id = var.comp-apne2-prod-igw_id
   comp-apne2-prod-nat_id = var.comp-apne2-prod-nat_id
-  comp-apne2-prod-default-ops-sg_id = var.comp-apne2-prod-default-ops-sg_id
-  comp-apne2-prod-mgmt-alb-sg_id = var.comp-apne2-prod-mgmt-alb-sg_id
-  comp-apne2-prod-pub-1a-sn_id = var.comp-apne2-prod-pub-1a-sn_id
-  comp-apne2-prod-pub-1c-sn_id = var.comp-apne2-prod-pub-1c-sn_id
 }
 
 module "ui" {
