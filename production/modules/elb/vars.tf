@@ -18,26 +18,6 @@ variable "resrc_prefix_nm" {
 
 
 # ######################
-# Subnet
-# ######################
-# public subnet
-variable "pub_sn_ids" {
-  description = "public subnets id"
-  type = list(string)
-}
-
-
-# ######################
-# Security Group
-# ######################
-# mgmt sg id
-variable "mgmt_sg_id" {
-  description = "mgmt sg id"
-  type = string
-}
-
-
-# ######################
 # Target Group
 # ######################
 # target group of ui
