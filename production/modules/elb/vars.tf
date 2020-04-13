@@ -1,23 +1,4 @@
 # ######################
-# COMMON
-# ######################
-variable "environment" {
-  description = "Runtime Environment such as default, develop, stage, production"
-  type = string
-}
-
-variable "svc_prefix_nm" {
-  description = "svc prefix name"
-  type = string
-}
-
-variable "resrc_prefix_nm" {
-  description = "resource prefix name"
-  type = string
-}
-
-
-# ######################
 # Target Group
 # ######################
 # target group of ui
@@ -43,12 +24,6 @@ variable "api-tg8080-b" {
 # ACM
 # Route 53
 # ######################
-# acm
-variable "acm_arn" {
-  description = "acm arn"
-  type = string
-}
-
 # route 53 host name
 variable "hosts" {
   description = "route 53 host name"

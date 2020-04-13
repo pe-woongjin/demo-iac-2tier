@@ -34,24 +34,8 @@ variable "vpc_cidr_block" {
 
 
 # ######################
-# Subnet
-# ######################
-# public subnet
-variable "pub_sn_list" {
-  description = "public subnets"
-  type = list(map(string))
-}
-
-
-# ######################
 # Route Table
 # ######################
-# public route table
-variable "public_rt_tag_names" {
-  description = "tag name for public route table"
-  type = list(map(string))
-}
-
 # private route table
 variable "private_rt_tag_names" {
   description = "tag name for private route table"
