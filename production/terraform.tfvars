@@ -28,20 +28,6 @@ vpc_cidr_block = "10.40.0.0/16"
 # ######################
 # Subnet
 # ######################
-# public subnet
-pub_sn_list = [
-  {
-    cidr_block = "10.40.10.0/24",
-    availability_zone = "ap-northeast-2a",
-    Name = "pub-1a-sn"
-  },
-  {
-    cidr_block = "10.40.11.0/24",
-    availability_zone = "ap-northeast-2c",
-    Name = "pub-1c-sn"
-  }
-]
-
 # private ui subnet
 ui_sn_list = [
   {
@@ -74,13 +60,6 @@ api_sn_list = [
 # ######################
 # Route Table
 # ######################
-# public route table
-public_rt_tag_names = [
-  {
-    Name = "pub-rt"
-  }
-]
-
 # private route table
 private_rt_tag_names = [
   {
@@ -123,9 +102,6 @@ api_lc = {
 # ACM
 # Route 53
 # ######################
-# acm
-acm_arn = "arn:aws:acm:ap-northeast-2:144149479695:certificate/efc7a467-526d-4476-b91f-ef69f146c6a6"
-
 # route 53 host name
 hosts = {
   "ui" = "ui.mingming.shop"
@@ -136,6 +112,6 @@ hosts = {
 # ######################
 # Data
 # ######################
-comp-apne2-prod-mgmt-alb_id = "arn:aws:elasticloadbalancing:ap-northeast-2:144149479695:listener/app/comp-apne2-prod-mgmt-alb/a1b6243e9868516a/544e2ed54ee9a24b"
-comp-apne2-prod-vpc_id = "vpc-00c322b7318b414b6"
-comp-apne2-prod-nat_id = "nat-0dab6362059ceac32"
+comp-apne2-prod-mgmt-alb_id = "arn:aws:elasticloadbalancing:ap-northeast-2:144149479695:listener/app/comp-apne2-prod-mgmt-alb/7fb89cc38384bf8a/80ca556d95ba414d"
+comp-apne2-prod-vpc_id = "vpc-0a3bac98ccde666e6"
+comp-apne2-prod-nat_id = "nat-01b880654bb2ed3c0"

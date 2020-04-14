@@ -12,17 +12,6 @@ provider "aws" {
 module "vpc" {
   source = "./modules/vpc"
 
-  # common
-  team_name = var.team_name
-  service_name = var.service_name
-  service_version = var.service_version
-  environment = var.environment
-  svc_prefix_nm = "${var.service_name}-${var.environment}"
-  resrc_prefix_nm = "${var.service_name}-${var.region_nm}-${var.environment}"
-
-  # vpc
-  vpc_cidr_block = var.vpc_cidr_block
-
   # import data
   comp-apne2-prod-vpc_id = var.comp-apne2-prod-vpc_id
 }
@@ -30,19 +19,11 @@ module "vpc" {
 module "elb" {
   source = "./modules/elb"
 
-  # common
-  environment = var.environment
-  svc_prefix_nm = "${var.service_name}-${var.environment}"
-  resrc_prefix_nm = "${var.service_name}-${var.region_nm}-${var.environment}"
-
   # tg
   ui-tg80-a = module.ui.ui-tg80-a
   ui-tg80-b = module.ui.ui-tg80-b
   api-tg8080-a = module.api.api-tg8080-a
   api-tg8080-b = module.api.api-tg8080-b
-
-  # acm
-  acm_arn = var.acm_arn
 
   # host
   hosts = var.hosts
@@ -61,13 +42,8 @@ module "demo" {
 
   # vpc
   vpc_id = module.vpc.id
-  vpc_cidr_block = var.vpc_cidr_block
-
-  # subnets
-  pub_sn_list = var.pub_sn_list
 
   # route table
-  public_rt_tag_names = var.public_rt_tag_names
   private_rt_tag_names = var.private_rt_tag_names
 
   # sg
@@ -87,7 +63,6 @@ module "ui" {
 
   # vpc
   vpc_id = module.vpc.id
-  vpc_cidr_block = var.vpc_cidr_block
 
   # subnet
   ui_sn_list = var.ui_sn_list
@@ -112,7 +87,6 @@ module "api" {
 
   # vpc
   vpc_id = module.vpc.id
-  vpc_cidr_block = var.vpc_cidr_block
 
   # subnet
   api_sn_list = var.api_sn_list

@@ -42,15 +42,6 @@ variable "vpc_cidr_block" {
 }
 
 
-# ######################
-# Subnet
-# ######################
-# public subnet
-variable "pub_sn_list" {
-  description = "public subnets"
-  type = list(map(string))
-}
-
 # ui subnet
 variable "ui_sn_list" {
   description = "private subnets"
@@ -67,12 +58,6 @@ variable "api_sn_list" {
 # ######################
 # Route Table
 # ######################
-# public route table
-variable "public_rt_tag_names" {
-  description = "tag name for public route table"
-  type = list(map(string))
-}
-
 # private route table
 variable "private_rt_tag_names" {
   description = "tag name for private route table"
@@ -111,12 +96,6 @@ variable "api_lc" {
 # ACM
 # Route 53
 # ######################
-# acm
-variable "acm_arn" {
-  description = "acm arn"
-  type = string
-}
-
 # route 53 host name
 variable "hosts" {
   description = "route 53 host name"
