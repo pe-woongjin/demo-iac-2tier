@@ -112,6 +112,6 @@ hosts = {
 # ######################
 # Data
 # ######################
-comp-apne2-prod-mgmt-alb_id = "arn:aws:elasticloadbalancing:ap-northeast-2:144149479695:listener/app/comp-apne2-prod-mgmt-alb/a1b6243e9868516a/544e2ed54ee9a24b"
-comp-apne2-prod-vpc_id = "vpc-00c322b7318b414b6"
-comp-apne2-prod-nat_id = "nat-0dab6362059ceac32"
+comp-apne2-prod-mgmt-alb_id = "arn:aws:elasticloadbalancing:ap-northeast-2:144149479695:listener/app/comp-apne2-prod-mgmt-alb/7fb89cc38384bf8a/80ca556d95ba414d"
+comp-apne2-prod-vpc_id = "vpc-0a3bac98ccde666e6"
+comp-apne2-prod-nat_id = "nat-01b880654bb2ed3c0"

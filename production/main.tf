@@ -42,7 +42,6 @@ module "demo" {
 
   # vpc
   vpc_id = module.vpc.id
-  vpc_cidr_block = var.vpc_cidr_block
 
   # route table
   private_rt_tag_names = var.private_rt_tag_names
@@ -64,7 +63,6 @@ module "ui" {
 
   # vpc
   vpc_id = module.vpc.id
-  vpc_cidr_block = var.vpc_cidr_block
 
   # subnet
   ui_sn_list = var.ui_sn_list
@@ -89,7 +87,6 @@ module "api" {
 
   # vpc
   vpc_id = module.vpc.id
-  vpc_cidr_block = var.vpc_cidr_block
 
   # subnet
   api_sn_list = var.api_sn_list
