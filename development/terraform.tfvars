@@ -80,7 +80,7 @@ sg_cidr_block = ["58.151.93.9/32", "58.151.93.2/32"]
 # ######################
 # ui launch configuration
 ui_lc = {
-    "id" = "ami-0d69d26d777db7c18"
+    "id" = "ami-04df341f89c111637"
     "type" = "t3.medium"
     "key_name" = "comp-prod-keypair"
     "min_size" = 1
@@ -89,7 +89,7 @@ ui_lc = {
 
 # api launch configuration
 api_lc = {
-  "id" = "ami-036d0b92069714dd9"
+  "id" = "ami-0da1693657fbc1977"
   "type" = "t3.medium"
   "key_name" = "comp-prod-keypair"
   "min_size" = 1
