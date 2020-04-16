@@ -20,8 +20,10 @@ module "elb" {
   source = "./modules/elb"
 
   # tg
-  app-tg7070-a = module.app.app-tg7070-a
-  app-tg7070-b = module.app.app-tg7070-b
+  ui-tg80-a = module.ui.ui-tg80-a
+  ui-tg80-b = module.ui.ui-tg80-b
+  api-tg8080-a = module.api.api-tg8080-a
+  api-tg8080-b = module.api.api-tg8080-b
 
   # host
   hosts = var.hosts
@@ -51,8 +53,8 @@ module "demo" {
   comp-apne2-prod-nat_id = var.comp-apne2-prod-nat_id
 }
 
-module "app" {
-  source = "./services/app"
+module "ui" {
+  source = "./services/ui"
 
   # common
   environment = var.environment
@@ -63,7 +65,7 @@ module "app" {
   vpc_id = module.vpc.id
 
   # subnet
-  app_sn_list = var.app_sn_list
+  ui_sn_list = var.ui_sn_list
 
   # router table
   pri_rt_ids = module.demo.pri_rt_ids
@@ -72,5 +74,29 @@ module "app" {
   sg_cidr_block = var.sg_cidr_block
 
   # lc
-  app_lc = var.app_lc
+  ui_lc = var.ui_lc
+}
+
+module "api" {
+  source = "./services/api"
+
+  # common
+  environment = var.environment
+  svc_prefix_nm = "${var.service_name}-${var.environment}"
+  resrc_prefix_nm = "${var.service_name}-${var.region_nm}-${var.environment}"
+
+  # vpc
+  vpc_id = module.vpc.id
+
+  # subnet
+  api_sn_list = var.api_sn_list
+
+  # router table
+  pri_rt_ids = module.demo.pri_rt_ids
+
+  # sg
+  sg_cidr_block = var.sg_cidr_block
+
+  # lc
+  api_lc = var.api_lc
 }

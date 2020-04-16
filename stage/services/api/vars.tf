@@ -30,9 +30,9 @@ variable "vpc_id" {
 # ######################
 # Subnet
 # ######################
-# app subnet
-variable "app_sn_list" {
-  description = "private app subnets"
+# api subnet
+variable "api_sn_list" {
+  description = "private api subnets"
   type = list(map(string))
 }
 
@@ -40,7 +40,7 @@ variable "app_sn_list" {
 # ######################
 # Route Table
 # ######################
-# router table ids
+# pivate router table ids
 variable "pri_rt_ids" {
   description = "pivate route table result ids"
   type = list(string)
@@ -60,8 +60,8 @@ variable "sg_cidr_block" {
 # ######################
 # Launch Configuration
 # ######################
-# app launch configuration
-variable "app_lc" {
-  description = "app launch configuration"
+# api launch configuration
+variable "api_lc" {
+  description = "api launch configuration"
   type = map(string)
 }

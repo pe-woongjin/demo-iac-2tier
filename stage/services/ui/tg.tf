@@ -1,7 +1,7 @@
-resource "aws_alb_target_group" "app-tg6060-a"  {
-  name          = "${var.resrc_prefix_nm}-app-tg6060-a"
+resource "aws_alb_target_group" "ui-tg80-a"  {
+  name          = "${var.resrc_prefix_nm}-ui-tg80-a"
   protocol      = "HTTP"
-  port          = 6060
+  port          = 80
   target_type   = "instance"
   vpc_id        = var.vpc_id
 
@@ -10,19 +10,19 @@ resource "aws_alb_target_group" "app-tg6060-a"  {
     unhealthy_threshold = 2
     interval            = 10
     matcher             = "200"
-    path                = "/swagger-ui.html"
+    path                = "/"
   }
 
   tags = {
-    Name        = "${var.resrc_prefix_nm}-app-tg6060-a"
+    Name        = "${var.resrc_prefix_nm}-ui-tg80-a"
     Environment = var.environment
   }
 }
 
-resource "aws_alb_target_group" "app-tg6060-b"  {
-  name          = "${var.resrc_prefix_nm}-app-tg6060-b"
+resource "aws_alb_target_group" "ui-tg80-b"  {
+  name          = "${var.resrc_prefix_nm}-ui-tg80-b"
   protocol      = "HTTP"
-  port          = 6060
+  port          = 80
   target_type   = "instance"
   vpc_id        = var.vpc_id
 
@@ -31,11 +31,11 @@ resource "aws_alb_target_group" "app-tg6060-b"  {
     unhealthy_threshold = 2
     interval            = 10
     matcher             = "200"
-    path                = "/swagger-ui.html"
+    path                = "/"
   }
 
   tags = {
-    Name        = "${var.resrc_prefix_nm}-app-tg6060-b"
+    Name        = "${var.resrc_prefix_nm}-ui-tg80-b"
     Environment = var.environment
   }
 }
