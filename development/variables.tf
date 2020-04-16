@@ -45,14 +45,8 @@ variable "vpc_cidr_block" {
 # ######################
 # Subnet
 # ######################
-# ui subnet
-variable "ui_sn_list" {
-  description = "private subnets"
-  type = list(map(string))
-}
-
-# api subnet
-variable "api_sn_list" {
+# app subnet
+variable "app_sn_list" {
   description = "private subnets"
   type = list(map(string))
 }
@@ -81,15 +75,9 @@ variable "sg_cidr_block" {
 # ######################
 # Launch Configuration
 # ######################
-# ui launch configuration
-variable "ui_lc" {
-  description = "ui launch configuration"
-  type = map(string)
-}
-
-# api launch configuration
-variable "api_lc" {
-  description = "api launch configuration"
+# app launch configuration
+variable "app_lc" {
+  description = "app launch configuration"
   type = map(string)
 }
 

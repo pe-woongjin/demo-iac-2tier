@@ -1,22 +1,13 @@
 # ######################
 # Target Group
 # ######################
-# target group of ui
-variable "ui-tg80-a" {
-  description = "target group of ui"
+# target group of app
+variable "app-tg8080-a" {
+  description = "target group of app"
 }
 
-variable "ui-tg80-b" {
-  description = "target group of ui"
-}
-
-# target group of api
-variable "api-tg8080-a" {
-  description = "target group of api"
-}
-
-variable "api-tg8080-b" {
-  description = "target group of api"
+variable "app-tg8080-b" {
+  description = "target group of app"
 }
 
 

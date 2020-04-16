@@ -59,7 +59,6 @@ variable "sg_cidr_block" {
 
 # ######################
 # Launch Configuration
-# AutoScaling Group
 # ######################
 # ui launch configuration
 variable "ui_lc" {
