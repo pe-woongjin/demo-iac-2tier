@@ -2,11 +2,11 @@
 # Target Group
 # ######################
 # target group of app
-variable "app-tg7070-a" {
+variable "app-tg6060-a" {
   description = "target group of app"
 }
 
-variable "app-tg7070-b" {
+variable "app-tg6060-b" {
   description = "target group of app"
 }
 

@@ -1,7 +1,7 @@
-resource "aws_alb_target_group" "app-tg7070-a"  {
-  name          = "${var.resrc_prefix_nm}-app-tg7070-a"
+resource "aws_alb_target_group" "app-tg6060-a"  {
+  name          = "${var.resrc_prefix_nm}-app-tg6060-a"
   protocol      = "HTTP"
-  port          = 7070
+  port          = 6060
   target_type   = "instance"
   vpc_id        = var.vpc_id
 
@@ -14,15 +14,15 @@ resource "aws_alb_target_group" "app-tg7070-a"  {
   }
 
   tags = {
-    Name        = "${var.resrc_prefix_nm}-app-tg7070-a"
+    Name        = "${var.resrc_prefix_nm}-app-tg6060-a"
     Environment = var.environment
   }
 }
 
-resource "aws_alb_target_group" "app-tg7070-b"  {
-  name          = "${var.resrc_prefix_nm}-app-tg7070-b"
+resource "aws_alb_target_group" "app-tg6060-b"  {
+  name          = "${var.resrc_prefix_nm}-app-tg6060-b"
   protocol      = "HTTP"
-  port          = 7070
+  port          = 6060
   target_type   = "instance"
   vpc_id        = var.vpc_id
 
@@ -35,7 +35,7 @@ resource "aws_alb_target_group" "app-tg7070-b"  {
   }
 
   tags = {
-    Name        = "${var.resrc_prefix_nm}-app-tg7070-b"
+    Name        = "${var.resrc_prefix_nm}-app-tg6060-b"
     Environment = var.environment
   }
 }

@@ -20,8 +20,8 @@ module "elb" {
   source = "./modules/elb"
 
   # tg
-  app-tg7070-a = module.app.app-tg7070-a
-  app-tg7070-b = module.app.app-tg7070-b
+  app-tg6060-a = module.app.app-tg6060-a
+  app-tg6060-b = module.app.app-tg6060-b
 
   # host
   hosts = var.hosts

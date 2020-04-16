@@ -18,7 +18,7 @@ resource "aws_autoscaling_group" "app-asg" {
   launch_configuration  = aws_launch_configuration.app-lc.id
   vpc_zone_identifier   = [ aws_subnet.app-sn[0].id, aws_subnet.app-sn[1].id ]
 
-  target_group_arns     = [ aws_alb_target_group.app-tg7070-a.arn ]
+  target_group_arns     = [ aws_alb_target_group.app-tg6060-a.arn ]
   health_check_type     = "ELB"
 
   min_size              = var.app_lc.min_size

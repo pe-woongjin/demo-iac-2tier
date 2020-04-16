@@ -11,7 +11,7 @@ service_name = "demo"
 service_version = "0.2"
 
 # env
-environment = "dev"
+environment = "stg"
 
 # region
 region_name = "ap-northeast-2"
@@ -31,12 +31,12 @@ vpc_cidr_block = "10.40.0.0/16"
 # private app subnet
 app_sn_list = [
   {
-    cidr_block = "10.40.50.0/24",
+    cidr_block = "10.40.60.0/24",
     availability_zone = "ap-northeast-2a",
     Name = "app-1a-sn"
   },
   {
-    cidr_block = "10.40.51.0/24",
+    cidr_block = "10.40.61.0/24",
     availability_zone = "ap-northeast-2c",
     Name = "app-1c-sn"
   }
@@ -66,7 +66,7 @@ sg_cidr_block = ["58.151.93.9/32", "58.151.93.2/32"]
 # ######################
 # app launch configuration
 app_lc = {
-  "id" = "ami-0c9700382c8b96af5"
+  "id" = "ami-07fe45927f33ac5ca"
   "type" = "t3.medium"
   "key_name" = "comp-prod-keypair"
   "min_size" = 1
@@ -79,7 +79,7 @@ app_lc = {
 # ######################
 # route 53 host name
 hosts = {
-  "app" = "dev.mingming.shop"
+  "app" = "stg.mingming.shop"
 }
 
 

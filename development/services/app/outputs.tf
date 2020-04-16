@@ -1,7 +1,7 @@
-output "app-tg8080-a" {
-  value = aws_alb_target_group.app-tg8080-a
+output "app-tg7070-a" {
+  value = aws_alb_target_group.app-tg7070-a
 }
 
-output "app-tg8080-b" {
-  value = aws_alb_target_group.app-tg8080-b
+output "app-tg7070-b" {
+  value = aws_alb_target_group.app-tg7070-b
 }

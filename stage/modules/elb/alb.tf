@@ -4,10 +4,10 @@ data "aws_alb_listener" "mgmt-alb-listener443" {
 
 resource "aws_alb_listener_rule" "mgmt-alb-listener443-app-rule" {
   listener_arn        = data.aws_alb_listener.mgmt-alb-listener443.arn
-  depends_on          = [ var.app-tg7070-a ]
+  depends_on          = [ var.app-tg6060-a ]
 
   action {
-    target_group_arn  = var.app-tg7070-a.arn
+    target_group_arn  = var.app-tg6060-a.arn
     type              = "forward"
   }
 
