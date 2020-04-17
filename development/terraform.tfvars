@@ -11,7 +11,7 @@ service_name = "demo"
 service_version = "0.2"
 
 # env
-environment = "prod"
+environment = "dev"
 
 # region
 region_name = "ap-northeast-2"
@@ -31,12 +31,12 @@ vpc_cidr_block = "10.40.0.0/16"
 # private ui subnet
 ui_sn_list = [
   {
-    cidr_block = "10.40.30.0/24",
+    cidr_block = "10.40.50.0/24",
     availability_zone = "ap-northeast-2a",
     Name = "ui-1a-sn"
   },
   {
-    cidr_block = "10.40.31.0/24",
+    cidr_block = "10.40.51.0/24",
     availability_zone = "ap-northeast-2c",
     Name = "ui-1c-sn"
   }
@@ -45,12 +45,12 @@ ui_sn_list = [
 # private api subnet
 api_sn_list = [
   {
-    cidr_block = "10.40.40.0/24",
+    cidr_block = "10.40.60.0/24",
     availability_zone = "ap-northeast-2a",
     Name = "api-1a-sn"
   },
   {
-    cidr_block = "10.40.41.0/24",
+    cidr_block = "10.40.61.0/24",
     availability_zone = "ap-northeast-2c",
     Name = "api-1c-sn"
   }
@@ -80,20 +80,20 @@ sg_cidr_block = ["58.151.93.9/32", "58.151.93.2/32"]
 # ######################
 # ui launch configuration
 ui_lc = {
-    "id" = "ami-0d69d26d777db7c18"
+    "id" = "ami-04df341f89c111637"
     "type" = "t3.medium"
     "key_name" = "comp-prod-keypair"
     "min_size" = 1
-    "max_size" = 3
+    "max_size" = 1
 }
 
 # api launch configuration
 api_lc = {
-  "id" = "ami-036d0b92069714dd9"
+  "id" = "ami-0da1693657fbc1977"
   "type" = "t3.medium"
   "key_name" = "comp-prod-keypair"
   "min_size" = 1
-  "max_size" = 3
+  "max_size" = 1
 }
 
 
@@ -102,8 +102,8 @@ api_lc = {
 # ######################
 # route 53 host name
 hosts = {
-  "ui" = "ui.mingming.shop"
-  "api" = "api.mingming.shop"
+  "ui" = "dev.ui.mingming.shop"
+  "api" = "dev.api.mingming.shop"
 }
 
 

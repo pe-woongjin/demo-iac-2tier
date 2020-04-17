@@ -28,22 +28,12 @@ variable "vpc_id" {
 
 
 # ######################
-# Subnet
-# ######################
-# api subnet
-variable "api_sn_list" {
-  description = "private api subnets"
-  type = list(map(string))
-}
-
-
-# ######################
 # Route Table
 # ######################
-# pivate router table ids
-variable "pri_rt_ids" {
-  description = "pivate route table result ids"
-  type = list(string)
+# private route table
+variable "private_rt_tag_names" {
+  description = "tag name for private route table"
+  type = list(map(string))
 }
 
 
@@ -58,10 +48,9 @@ variable "sg_cidr_block" {
 
 
 # ######################
-# Launch Configuration
+# Data
 # ######################
-# api launch configuration
-variable "api_lc" {
-  description = "api launch configuration"
-  type = map(string)
+variable "comp-apne2-prod-nat_id" {
+  description = "comp-apne2-prod-nat_id"
+  type = string
 }
