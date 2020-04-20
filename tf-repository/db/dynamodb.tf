@@ -1,5 +1,5 @@
-resource "aws_dynamodb_table" "dynamo-tb" {
-  name            = "${var.resrc_prefix_nm}-dynamo-tb"
+resource "aws_dynamodb_table" "terraform-lock-table" {
+  name            = var.dynamodb_tbl
 
   // The number of read units for this table
   read_capacity   = 5
@@ -22,7 +22,7 @@ resource "aws_dynamodb_table" "dynamo-tb" {
   }
 
   tags = {
-    Name        = "${var.resrc_prefix_nm}-dynamo-tb"
+    Name        = var.dynamodb_tbl
     Environment = var.environment
   }
 }

@@ -2,10 +2,10 @@ terraform {
   required_version = "~> 0.12.20"
 
   backend "s3" {
-    bucket          = "demo-apne2-dev-s3-state"
-    key             = "terraform.tfstate"
+    bucket          = "terraform-tfstates-mgmt"
+    key             = "demo/prod/terraform.tfstate"
     region          = "ap-northeast-2"
-    dynamodb_table  = "demo-apne2-dev-dynamo-tb"
+    dynamodb_table  = "terraform-lock-table"
     encrypt         = true
     acl             = "bucket-owner-full-control"
   }

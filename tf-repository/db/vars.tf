@@ -6,12 +6,11 @@ variable "environment" {
   type = string
 }
 
-variable "svc_prefix_nm" {
-  description = "svc prefix name"
-  type = string
-}
 
-variable "resrc_prefix_nm" {
-  description = "resource prefix name"
+# ######################
+# Dynamo DB
+# ######################
+variable "dynamodb_tbl" {
+  description = "dynamo db table name"
   type = string
 }

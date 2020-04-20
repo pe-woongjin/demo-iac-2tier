@@ -10,11 +10,23 @@ provider "aws" {
   version = "~> 2.51"
 }
 
-module "s3" {
-  source = "./s3"
+module "storage" {
+  source = "./storage"
 
   # common
   environment = var.environment
-  svc_prefix_nm = "${var.service_name}-${var.environment}"
-  resrc_prefix_nm = "${var.service_name}-${var.region_nm}-${var.environment}"
+
+  # s3
+  s3_log = var.s3_log
+  s3_mgmt = var.s3_mgmt
+}
+
+module "db" {
+  source = "./db"
+
+  # common
+  environment = var.environment
+
+  # dynamo db
+  dynamodb_tbl = var.dynamodb_tbl
 }

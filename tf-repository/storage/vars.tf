@@ -6,12 +6,16 @@ variable "environment" {
   type = string
 }
 
-variable "svc_prefix_nm" {
-  description = "svc prefix name"
+
+# ######################
+# S3
+# ######################
+variable "s3_log" {
+  description = "s3 log bucket name"
   type = string
 }
 
-variable "resrc_prefix_nm" {
-  description = "resource prefix name"
+variable "s3_mgmt" {
+  description = "s3 mgmt bucket name"
   type = string
 }
