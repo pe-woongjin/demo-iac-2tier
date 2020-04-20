@@ -1,6 +1,14 @@
 terraform {
   required_version = "~> 0.12.20"
-  backend "local" {}
+
+  backend "s3" {
+    bucket          = "terraform-tfstates-mgmt"
+    key             = "demo/stg/terraform.tfstate"
+    region          = "ap-northeast-2"
+    dynamodb_table  = "terraform-lock-table"
+    encrypt         = true
+    acl             = "bucket-owner-full-control"
+  }
 }
 
 provider "aws" {
