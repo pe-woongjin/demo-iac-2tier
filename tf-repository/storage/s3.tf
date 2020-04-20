@@ -14,7 +14,7 @@ resource "aws_s3_bucket" "terraform-tfstates-mgmt" {
 
   logging {
     target_bucket = aws_s3_bucket.terraform-tfstates-log.id
-    target_prefix = "/"
+    target_prefix = "log/"
   }
 
   versioning {
