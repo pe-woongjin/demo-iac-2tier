@@ -39,24 +39,25 @@ cmd $ cd workspace
 
 /* git clone */
 cmd $ git clone https://github.com/pe-woongjin/demo-iac-2tier.git
-cmd $ cd ~/workspace/demo-iac-2tier/production
+cmd $ cd ~/workspace/demo-iac-2tier
 ```
 
 ### 2.3 demo 프로젝트 구성 방법
+* production 환경 기준
 1 .tfstate 관리를 위해, S3 우선 구성
 ```console
-    cmd $ cd ~/workspace/demo-iac-2tier/tf-repository/production
+    cmd $ cd ~/workspace/demo-iac-2tier/prd-env/prd-tfstate
     cmd $ terraform init
     cmd $ terraform plan
     cmd $ terraform apply
 ```
 
-2 S3 구성이 완료되면, ~/workspace/demo-iac-2tier/production축 으로 돌아가 환경 구축
+2 S3 구성이 완료되면, 인프라 구축
 ```console
-    cmd $ cd ~/workspace/demo-iac-2tier/production
+    cmd $ cd ~/workspace/demo-iac-2tier/prd-env/prd-infra
     cmd $ terraform init
     cmd $ terraform plan
     cmd $ terraform apply
 ``` 
 
-3 demo 인프라 구축이 완료되고, demo .tfstate가 기구축한 S3에 업로드되었는지 확인
+3 인프라 구축이 완료되고, .tfstate가 기구축한 S3에 업로드 되었는지 확인
