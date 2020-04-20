@@ -44,20 +44,20 @@ cmd $ cd ~/workspace/demo-iac-2tier
 
 ### 2.3 demo 프로젝트 구성 방법
 * production 환경 기준
-1 .tfstate 관리를 위해, S3 우선 구성
+1) .tfstate 관리를 위해, S3 우선 구성
 ```console
-    cmd $ cd ~/workspace/demo-iac-2tier/prd-env/prd-tfstate
+    cmd $ cd ~/workspace/demo-iac-2tier/production/prd-tfstate
     cmd $ terraform init
     cmd $ terraform plan
     cmd $ terraform apply
 ```
 
-2 S3 구성이 완료되면, 인프라 구축
+2) S3 구성이 완료되면, 인프라 구축
 ```console
-    cmd $ cd ~/workspace/demo-iac-2tier/prd-env/prd-infra
+    cmd $ cd ~/workspace/demo-iac-2tier/production/prd-infra
     cmd $ terraform init
     cmd $ terraform plan
     cmd $ terraform apply
 ``` 
 
-3 인프라 구축이 완료되고, .tfstate가 기구축한 S3에 업로드 되었는지 확인
+3) 인프라 구축이 완료되고, .tfstate가 기구축한 S3에 업로드 되었는지 확인
