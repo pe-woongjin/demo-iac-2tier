@@ -5,6 +5,8 @@ resource "aws_launch_template" "api-lt" {
   instance_type           = var.api_lt.type
   vpc_security_group_ids  = [ aws_security_group.api-sg.id ]
 
+  user_data = base64encode(templatefile("./services/api/api-userdata.tpl", {}))
+
   tag_specifications {
     resource_type = "instance"
     tags = {

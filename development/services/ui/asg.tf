@@ -21,7 +21,7 @@ resource "aws_autoscaling_group" "ui-asg" {
     id      = aws_launch_template.ui-lt.id
     version = "$Latest"
   }
-
+  
   target_group_arns     = [ aws_alb_target_group.ui-tg80-a.arn ]
   health_check_type     = "ELB"
 
