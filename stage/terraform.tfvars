@@ -81,7 +81,7 @@ sg_cidr_block = ["58.151.93.9/32", "58.151.93.2/32"]
 # ui launch template
 ui_lt = {
     "id" = "ami-0cd7b0de75f5a35d1" // "ami-0740ca5a912ab5be6" (ui stg img)
-    "type" = "t3.medium"
+    "type" = "t3.small"
     "key_name" = "comp-prod-keypair"
     "min_size" = 0
     "max_size" = 0
@@ -90,7 +90,7 @@ ui_lt = {
 # api launch template
 api_lt = {
   "id" = "ami-0cd7b0de75f5a35d1" // "ami-00e46f0632d32c625" (api stg img)
-  "type" = "t3.medium"
+  "type" = "t3.small"
   "key_name" = "comp-prod-keypair"
   "min_size" = 0
   "max_size" = 0
