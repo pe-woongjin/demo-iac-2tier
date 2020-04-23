@@ -58,10 +58,10 @@ variable "sg_cidr_block" {
 
 
 # ######################
-# Launch Configuration
+# Launch Template
 # ######################
-# ui launch configuration
-variable "ui_lc" {
-  description = "ui launch configuration"
+# ui launch template
+variable "ui_lt" {
+  description = "ui launch template"
   type = map(string)
 }

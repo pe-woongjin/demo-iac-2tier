@@ -76,24 +76,24 @@ sg_cidr_block = ["58.151.93.9/32", "58.151.93.2/32"]
 
 
 # ######################
-# Launch Configuration
+# Launch Template
 # ######################
-# ui launch configuration
-ui_lc = {
-    "id" = "ami-0d69d26d777db7c18"
-    "type" = "t3.medium"
+# ui launch template
+ui_lt = {
+    "id" = "ami-0cd7b0de75f5a35d1" //"ami-0d69d26d777db7c18" (ui prod img)
+    "type" = "t3.small"
     "key_name" = "comp-prod-keypair"
-    "min_size" = 1
-    "max_size" = 3
+    "min_size" = 0
+    "max_size" = 0
 }
 
-# api launch configuration
-api_lc = {
-  "id" = "ami-036d0b92069714dd9"
-  "type" = "t3.medium"
+# api launch template
+api_lt = {
+  "id" = "ami-0cd7b0de75f5a35d1" //"ami-036d0b92069714dd9" (api prod img)
+  "type" = "t3.small"
   "key_name" = "comp-prod-keypair"
-  "min_size" = 1
-  "max_size" = 3
+  "min_size" = 0
+  "max_size" = 0
 }
 
 
