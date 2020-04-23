@@ -82,7 +82,7 @@ module "ui" {
   sg_cidr_block = var.sg_cidr_block
 
   # lc
-  ui_lc = var.ui_lc
+  ui_lt = var.ui_lt
 }
 
 module "api" {
@@ -106,5 +106,5 @@ module "api" {
   sg_cidr_block = var.sg_cidr_block
 
   # lc
-  api_lc = var.api_lc
+  api_lt = var.api_lt
 }
