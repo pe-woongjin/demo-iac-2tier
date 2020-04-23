@@ -11,11 +11,11 @@ variable "ui-tg80-b" {
 }
 
 # target group of api
-variable "api-tg8080-a" {
+variable "api-a-tg8080" {
   description = "target group of api"
 }
 
-variable "api-tg8080-b" {
+variable "api-b-tg8080" {
   description = "target group of api"
 }
 

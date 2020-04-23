@@ -30,8 +30,8 @@ module "elb" {
   # tg
   ui-tg80-a = module.ui.ui-tg80-a
   ui-tg80-b = module.ui.ui-tg80-b
-  api-tg8080-a = module.api.api-tg8080-a
-  api-tg8080-b = module.api.api-tg8080-b
+  api-a-tg8080 = module.api.api-a-tg8080
+  api-b-tg8080 = module.api.api-b-tg8080
 
   # host
   hosts = var.hosts

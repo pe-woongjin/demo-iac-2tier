@@ -1,5 +1,5 @@
-resource "aws_alb_target_group" "api-tg8080-a"  {
-  name          = "${var.resrc_prefix_nm}-api-tg8080-a"
+resource "aws_alb_target_group" "api-a-tg8080"  {
+  name          = "${var.resrc_prefix_nm}-api-a-tg8080"
   protocol      = "HTTP"
   port          = 8080
   target_type   = "instance"
@@ -10,17 +10,17 @@ resource "aws_alb_target_group" "api-tg8080-a"  {
     unhealthy_threshold = 2
     interval            = 10
     matcher             = "200"
-    path                = "/swagger-ui.html"
+    path                = "/health"
   }
 
   tags = {
-    Name        = "${var.resrc_prefix_nm}-api-tg8080-a"
+    Name        = "${var.resrc_prefix_nm}-api-a-tg8080"
     Environment = var.environment
   }
 }
 
-resource "aws_alb_target_group" "api-tg8080-b"  {
-  name          = "${var.resrc_prefix_nm}-api-tg8080-b"
+resource "aws_alb_target_group" "api-b-tg8080"  {
+  name          = "${var.resrc_prefix_nm}-api-b-tg8080"
   protocol      = "HTTP"
   port          = 8080
   target_type   = "instance"
@@ -31,11 +31,11 @@ resource "aws_alb_target_group" "api-tg8080-b"  {
     unhealthy_threshold = 2
     interval            = 10
     matcher             = "200"
-    path                = "/swagger-ui.html"
+    path                = "/health"
   }
 
   tags = {
-    Name        = "${var.resrc_prefix_nm}-api-tg8080-b"
+    Name        = "${var.resrc_prefix_nm}-api-b-tg8080"
     Environment = var.environment
   }
 }
