@@ -1,7 +1,7 @@
-output "ui-tg80-a" {
-  value = aws_alb_target_group.ui-tg80-a
+output "ui-a-tg80" {
+  value = aws_alb_target_group.ui-a-tg80
 }
 
-output "ui-tg80-b" {
-  value = aws_alb_target_group.ui-tg80-b
+output "ui-b-tg80" {
+  value = aws_alb_target_group.ui-b-tg80
 }

@@ -1,5 +1,5 @@
-resource "aws_alb_target_group" "ui-tg80-a"  {
-  name          = "${var.resrc_prefix_nm}-ui-tg80-a"
+resource "aws_alb_target_group" "ui-a-tg80"  {
+  name          = "${var.resrc_prefix_nm}-ui-a-tg80"
   protocol      = "HTTP"
   port          = 80
   target_type   = "instance"
@@ -14,13 +14,13 @@ resource "aws_alb_target_group" "ui-tg80-a"  {
   }
 
   tags = {
-    Name        = "${var.resrc_prefix_nm}-ui-tg80-a"
+    Name        = "${var.resrc_prefix_nm}-ui-a-tg80"
     Environment = var.environment
   }
 }
 
-resource "aws_alb_target_group" "ui-tg80-b"  {
-  name          = "${var.resrc_prefix_nm}-ui-tg80-b"
+resource "aws_alb_target_group" "ui-b-tg80"  {
+  name          = "${var.resrc_prefix_nm}-ui-b-tg80"
   protocol      = "HTTP"
   port          = 80
   target_type   = "instance"
@@ -35,7 +35,7 @@ resource "aws_alb_target_group" "ui-tg80-b"  {
   }
 
   tags = {
-    Name        = "${var.resrc_prefix_nm}-ui-tg80-b"
+    Name        = "${var.resrc_prefix_nm}-ui-b-tg80"
     Environment = var.environment
   }
 }

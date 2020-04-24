@@ -2,11 +2,11 @@
 # Target Group
 # ######################
 # target group of ui
-variable "ui-tg80-a" {
+variable "ui-a-tg80" {
   description = "target group of ui"
 }
 
-variable "ui-tg80-b" {
+variable "ui-b-tg80" {
   description = "target group of ui"
 }
 
