@@ -1,0 +1,9 @@
+site_name: Terraform by demo-iac-2tier
+pages:
+  - Main: index.md
+  - Build: 'common/build.md'
+  - Source:
+      - 'directory': 'common/directory.md'
+      - 'module': 'source/module.md'
+      - 'services': 'source/service.md'
+      - 'repository': 'source/repository.md'
