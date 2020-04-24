@@ -20,10 +20,10 @@ resource "aws_alb_listener_rule" "mgmt-alb-listener443-ui-rule" {
 
 resource "aws_alb_listener_rule" "mgmt-alb-listener443-api-rule" {
   listener_arn        = data.aws_alb_listener.mgmt-alb-listener443.arn
-  depends_on          = [ var.api-tg8080-a ]
+  depends_on          = [ var.api-a-tg8080 ]
 
   action {
-    target_group_arn  = var.api-tg8080-a.arn
+    target_group_arn  = var.api-a-tg8080.arn
     type              = "forward"
   }
 

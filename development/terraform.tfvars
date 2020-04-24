@@ -89,7 +89,7 @@ ui_lt = {
 
 # api launch template
 api_lt = {
-  "id" = "ami-0da1693657fbc1977"
+  "id" = "ami-05e8081dc84c470e9"
   "type" = "t3.small"
   "key_name" = "comp-prod-keypair"
   "min_size" = 1
