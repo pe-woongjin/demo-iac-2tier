@@ -28,8 +28,8 @@ module "elb" {
   source = "./modules/elb"
 
   # tg
-  ui-tg80-a = module.ui.ui-tg80-a
-  ui-tg80-b = module.ui.ui-tg80-b
+  ui-a-tg80 = module.ui.ui-a-tg80
+  ui-b-tg80 = module.ui.ui-b-tg80
   api-a-tg8080 = module.api.api-a-tg8080
   api-b-tg8080 = module.api.api-b-tg8080
 

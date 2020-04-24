@@ -22,7 +22,7 @@ resource "aws_autoscaling_group" "api-asg" {
     version = "$Latest"
   }
 
-  target_group_arns     = [ aws_alb_target_group.api-tg8080-a.arn ]
+  target_group_arns     = [ aws_alb_target_group.api-a-tg8080.arn ]
   health_check_type     = "ELB"
 
   min_size              = var.api_lt.min_size

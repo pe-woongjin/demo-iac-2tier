@@ -10,7 +10,7 @@ resource "aws_alb_target_group" "api-a-tg8080"  {
     unhealthy_threshold = 2
     interval            = 10
     matcher             = "200"
-    path                = "/health"
+    path                = "/swagger-ui.html"
   }
 
   tags = {
@@ -31,7 +31,7 @@ resource "aws_alb_target_group" "api-b-tg8080"  {
     unhealthy_threshold = 2
     interval            = 10
     matcher             = "200"
-    path                = "/health"
+    path                = "/swagger-ui.html"
   }
 
   tags = {

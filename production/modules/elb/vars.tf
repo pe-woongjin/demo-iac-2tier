@@ -2,20 +2,20 @@
 # Target Group
 # ######################
 # target group of ui
-variable "ui-tg80-a" {
+variable "ui-a-tg80" {
   description = "target group of ui"
 }
 
-variable "ui-tg80-b" {
+variable "ui-b-tg80" {
   description = "target group of ui"
 }
 
 # target group of api
-variable "api-tg8080-a" {
+variable "api-a-tg8080" {
   description = "target group of api"
 }
 
-variable "api-tg8080-b" {
+variable "api-b-tg8080" {
   description = "target group of api"
 }
 
