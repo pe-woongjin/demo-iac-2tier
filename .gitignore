@@ -29,3 +29,6 @@ override.tf.json
 # example: *tfplan*
 /.idea/
 /*.iml
+
+# mkdocs
+/mkdocs/site/
