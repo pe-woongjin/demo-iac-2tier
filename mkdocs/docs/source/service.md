@@ -17,3 +17,9 @@
 ### 4. Code Deploy
 > `aws_codedeploy_deployment_group`에서 AutoScaling Group, Role, App을 설정합니다.
 ![Screenshot](../img/cd.png)
+>
+#### 4.1 Code Deploy Config
+![Screenshot](../img/cd_config.png)
+>
+#### 4.2 Code Deploy Style
+![Screenshot](../img/cd_style.png)
