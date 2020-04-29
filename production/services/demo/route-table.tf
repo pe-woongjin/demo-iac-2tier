@@ -1,6 +1,6 @@
 resource "aws_route_table" "pri-rt" {
-  vpc_id        = var.vpc_id
-  count         = length(var.private_rt_tag_names)
+  vpc_id  = var.vpc_id
+  count   = length(var.private_rt_tag_names)
 
   route {
     cidr_block  = "0.0.0.0/0"

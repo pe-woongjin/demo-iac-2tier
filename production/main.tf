@@ -54,9 +54,6 @@ module "demo" {
   # route table
   private_rt_tag_names = var.private_rt_tag_names
 
-  # sg
-  sg_cidr_block = var.sg_cidr_block
-
   # import data
   comp-apne2-prod-nat_id = var.comp-apne2-prod-nat_id
 }
@@ -78,9 +75,6 @@ module "ui" {
   # router table
   pri_rt_ids = module.demo.pri_rt_ids
 
-  # sg
-  sg_cidr_block = var.sg_cidr_block
-
   # lc
   ui_lt = var.ui_lt
 }
@@ -101,9 +95,6 @@ module "api" {
 
   # router table
   pri_rt_ids = module.demo.pri_rt_ids
-
-  # sg
-  sg_cidr_block = var.sg_cidr_block
 
   # lc
   api_lt = var.api_lt
