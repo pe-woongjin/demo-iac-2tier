@@ -1,6 +1,6 @@
 resource "aws_security_group" "ui-sg" {
-  name          = "${var.resrc_prefix_nm}-ui-sg"
-  vpc_id        = var.vpc_id
+  name    = "${var.resrc_prefix_nm}-ui-sg"
+  vpc_id  = var.vpc_id
 
   ingress {
     from_port   = 22

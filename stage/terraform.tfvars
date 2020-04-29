@@ -69,13 +69,6 @@ private_rt_tag_names = [
 
 
 # ######################
-# Security Group
-# ######################
-# sg cidr block
-sg_cidr_block = ["58.151.93.9/32", "58.151.93.2/32"]
-
-
-# ######################
 # Launch Template
 # ######################
 # ui launch template

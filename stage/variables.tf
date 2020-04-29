@@ -69,16 +69,6 @@ variable "private_rt_tag_names" {
 
 
 # ######################
-# Security Group
-# ######################
-# sg cidr block
-variable "sg_cidr_block" {
-  description = "cidr block of sg"
-  type = list(string)
-}
-
-
-# ######################
 # Launch Template
 # ######################
 # ui launch template
