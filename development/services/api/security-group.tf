@@ -1,6 +1,6 @@
 resource "aws_security_group" "api-sg" {
-  name          = "${var.resrc_prefix_nm}-api-sg"
-  vpc_id        = var.vpc_id
+  name    = "${var.resrc_prefix_nm}-api-sg"
+  vpc_id  = var.vpc_id
 
   ingress {
     from_port   = 22

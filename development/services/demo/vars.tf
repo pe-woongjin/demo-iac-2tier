@@ -38,16 +38,6 @@ variable "private_rt_tag_names" {
 
 
 # ######################
-# Security Group
-# ######################
-# sg cidr block
-variable "sg_cidr_block" {
-  description = "cidr block of sg"
-  type = list(string)
-}
-
-
-# ######################
 # Data
 # ######################
 variable "comp-apne2-prod-nat_id" {

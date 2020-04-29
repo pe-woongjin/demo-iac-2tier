@@ -48,16 +48,6 @@ variable "pri_rt_ids" {
 
 
 # ######################
-# Security Group
-# ######################
-# sg cidr block
-variable "sg_cidr_block" {
-  description = "cidr block of sg"
-  type = list(string)
-}
-
-
-# ######################
 # Launch Template
 # ######################
 # api launch template

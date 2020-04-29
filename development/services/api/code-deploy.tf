@@ -1,10 +1,10 @@
 data "aws_iam_role" "comp-codedeploy-role" {
-  name                   = "comp-codedeploy-role"
+  name = "comp-codedeploy-role"
 }
 
 resource "aws_codedeploy_app" "api-cd" {
-  name                    = "${var.resrc_prefix_nm}-api-cd"
-  compute_platform        = "Server"
+  name              = "${var.resrc_prefix_nm}-api-cd"
+  compute_platform  = "Server"
 }
 
 resource "aws_codedeploy_deployment_group" "api-cd-group-a" {
@@ -15,7 +15,7 @@ resource "aws_codedeploy_deployment_group" "api-cd-group-a" {
   autoscaling_groups      = [ aws_autoscaling_group.api-a-asg.id ]
 
   deployment_style {
-    deployment_type       = "IN_PLACE"
+    deployment_type = "IN_PLACE"
   }
 
   lifecycle {
@@ -31,7 +31,7 @@ resource "aws_codedeploy_deployment_group" "api-cd-group-b" {
   autoscaling_groups      = [ aws_autoscaling_group.api-b-asg.id ]
 
   deployment_style {
-    deployment_type       = "IN_PLACE"
+    deployment_type = "IN_PLACE"
   }
 
   lifecycle {
