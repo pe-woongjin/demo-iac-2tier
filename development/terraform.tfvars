@@ -82,7 +82,7 @@ ui_lt = {
 
 # api launch template
 api_lt = {
-  "id" = "ami-05e8081dc84c470e9"
+  "id" = "ami-0da1693657fbc1977"
   "type" = "t3.small"
   "key_name" = "comp-prod-keypair"
   "min_size" = 1
@@ -96,7 +96,7 @@ api_lt = {
 # route 53 host name
 hosts = {
   "ui" = "dev.ui.mingming.shop"
-  "api" = "dev.api.mingming.shop"
+  "api" = "demo-api-dev.mingming.shop"
 }
 
 
