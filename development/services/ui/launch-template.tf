@@ -9,6 +9,8 @@ resource "aws_launch_template" "ui-lt" {
     name = "comp-codedeploy-ec2-role"
   }
 
+  user_data = base64encode(templatefile("./services/api/ud-startup-health.tpl", {}))
+
   tag_specifications {
     resource_type = "instance"
     tags = {

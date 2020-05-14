@@ -76,17 +76,17 @@ ui_lt = {
     "id" = "ami-04df341f89c111637"
     "type" = "t3.small"
     "key_name" = "comp-prod-keypair"
-    "min_size" = 1
+    "min_size" = 0
     "max_size" = 2
 }
 
 # api launch template
 api_lt = {
-  "id" = "ami-0da1693657fbc1977"
+  "id" = "ami-02bd0e970a9cbfa01"
   "type" = "t3.small"
   "key_name" = "comp-prod-keypair"
-  "min_size" = 1
-  "max_size" = 2
+  "min_size" = 0
+  "max_size" = 4
 }
 
 
