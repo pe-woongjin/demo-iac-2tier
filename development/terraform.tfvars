@@ -76,7 +76,7 @@ ui_lt = {
     "id" = "ami-04df341f89c111637"
     "type" = "t3.small"
     "key_name" = "comp-prod-keypair"
-    "min_size" = 0
+    "min_size" = 1
     "max_size" = 2
 }
 
@@ -85,8 +85,8 @@ api_lt = {
   "id" = "ami-08ccf8b9f68211181"
   "type" = "t3.small"
   "key_name" = "comp-prod-keypair"
-  "min_size" = 0
-  "max_size" = 4
+  "min_size" = 1
+  "max_size" = 2
 }
 
 
